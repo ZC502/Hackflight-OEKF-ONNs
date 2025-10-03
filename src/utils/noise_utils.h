@@ -5,14 +5,14 @@
 #include <cstdlib>  // rand()
 
 struct NoiseParams {
-    float accel_noise_std = 0.01f;  // m/s² 白噪声
+    float accel_noise_std = 0.01f;  // m/s² white noise
     float gyro_noise_std = 0.001f;  // rad/s
-    float accel_bias_std = 0.0001f; // 偏置漂移
+    float accel_bias_std = 0.0001f; // Bias drift
     float gyro_bias_std = 0.00001f;
-    float bias_tc = 10.0f;  // 时间常数 s
-    float gps_noise_std_h = 0.5f;   // 水平 m
-    float gps_noise_std_v = 1.0f;   // 垂直 m
-    float gps_jump_prob = 0.1f;     // 跳变概率
+    float bias_tc = 10.0f;  // Time constant s
+    float gps_noise_std_h = 0.5f;   // Level m
+    float gps_noise_std_v = 1.0f;   // Vertical m
+    float gps_jump_prob = 0.1f;     // jump probability
 };
 
 class NoiseGen {
