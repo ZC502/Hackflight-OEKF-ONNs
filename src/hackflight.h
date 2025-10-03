@@ -45,6 +45,10 @@
 // MPU6050Sensor.h
 #include "sensors/MPU6050Sensor.h"
 
+// GPSSensor.h
+#include "sensors/GPSSensor.h"
+
+
 
 class Hackflight {
 
