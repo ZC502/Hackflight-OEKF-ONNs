@@ -17,3 +17,49 @@
 #pragma once
 
 #include <stdint.h>
+#include <vector>  // For std::vector if needed
+#include <random>  // For noise gen (if not in utils)
+
+// Sensors
+#include "sensors/Sensor.h"
+#include "sensors/MPU6050Sensor.h"  // Added for IMU with noise
+
+// Estimators
+#include "estimators/Estimator.h"
+#include "estimators/KalmanEstimator.h"  // Baseline EKF for comparison
+#include "estimators/OEKFEstimator.h"  // Your new OEKF
+
+// Utils (your additions)
+#include "utils/noise.h"  // Noise generator and params
+
+// Core (existing, assume already included)
+#include "core/PIDController.h"
+#include "core/Mixer.h"
+
+// Debug
+#include "debug.h"
+
+// Boards (hardware-specific, if needed)
+#include "boards/board.h"
+
+class Hackflight {
+
+public:
+    // Existing constructor/init/run (add if missing)
+    Hackflight();
+    void init();
+    void update();
+
+    // Your additions: e.g., set_noise_params for config
+    void set_noise_params(double sigma_gyro, double sigma_accel);
+
+private:
+    // Existing members (sensors, estimator, etc.)
+    MPU6050Sensor * imu_sensor;
+    Estimator * estimator;  // Can set to new OEKFEstimator()
+    NoiseParams noise_params;  // From utils
+
+    // ... rest of class body (PID, mixer, etc.)
+};
+
+#endif  // End of #ifndef HACKFLIGHT_H (add if missing)
