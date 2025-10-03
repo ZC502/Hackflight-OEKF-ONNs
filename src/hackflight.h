@@ -42,6 +42,10 @@
 // Boards (hardware-specific, if needed)
 #include "boards/board.h"
 
+// MPU6050Sensor.h
+#include "sensors/MPU6050Sensor.h"
+
+
 class Hackflight {
 
 public:
