@@ -2,6 +2,9 @@
 #include <webots/InertialUnit.hpp>
 #include "../src/hackflight.h"  // Your aggregated header
 
+NoiseGen noise_gen; 
+NoiseParams noise_params;
+
 int main(int argc, char **argv) {
     webots::Robot *robot = new webots::Robot();
     webots::InertialUnit *imu = robot->getDevice<webots::InertialUnit>("imu");
