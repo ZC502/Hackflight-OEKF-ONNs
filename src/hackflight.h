@@ -48,6 +48,9 @@
 // GPSSensor.h
 #include "sensors/GPSSensor.h"
 
+// OEKFEstimator.h
+#include "estimators/OEKFEstimator.h"
+
 
 
 class Hackflight {
