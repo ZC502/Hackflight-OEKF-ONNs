@@ -2,8 +2,8 @@
 #define OEKF_ESTIMATOR_H
 
 #include "Estimator.h"  // Base class (assume src/estimators/Estimator.h exists)
-#include "../tinyoekf.h"  // Your TinyOEKF header (adjust path if needed)
-#include "../utils/noise.h"  // For noise_params
+#include "src/tinyoekf.h"  // Your TinyOEKF header 
+#include "src/utils/noise_utils.h"  // For noise_params
 
 class OEKFEstimator : public Estimator {
 public:
