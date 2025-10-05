@@ -1,8 +1,10 @@
 #include <webots/Robot.hpp>
 #include <webots/InertialUnit.hpp>
 #include <webots/GPS.hpp>  // For GPS true values
-#include "../src/hackflight.h"  // Your aggregated header (assumes includes GPSSensor.h and OEKFEstimator.h)
-#include "../src/sensors/GPSSensor.h"  // Explicit include for GPS
+#include "src/sensors/GPSSensor.h
+#include "src/estimators/OEKFEstimator.h"
+#include "src/hackflight.h"  // Your aggregated header 
+#include "src/sensors/GPSSensor.h"  // Explicit include for GPS
 
 // Global noise (from utils/noise.h)
 NoiseGen noise_gen;
