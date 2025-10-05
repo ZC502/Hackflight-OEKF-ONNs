@@ -64,10 +64,12 @@ public:
     // Your additions: e.g., set_noise_params for config
     void set_noise_params(double sigma_gyro, double sigma_accel);
 
+    void Hackflight::init() { ... }
+
 private:
     // Existing members (sensors, estimator, etc.)
     MPU6050Sensor * imu_sensor;
-    Estimator * estimator;  // Can set to new OEKFEstimator()
+    estimator = new OEKFEstimator();  // Replace KalmanEstimator
     NoiseParams noise_params;  // From utils
 
     // ... rest of class body (PID, mixer, etc.)
