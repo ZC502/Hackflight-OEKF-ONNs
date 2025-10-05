@@ -7,7 +7,7 @@
 static float z0, z1;
 static bool generate = false;
 
-float MPU6050Sensor::randn() {  // Your Box-Muller
+float MPU6050Sensor::randn() {  // Box-Muller
     generate = !generate;
     if (!generate) return z1;
     float u1 = (float)rand() / RAND_MAX;
