@@ -21,6 +21,7 @@ set(SOURCES
     ../src/sensors/MPU6050Sensor.cpp  # IMU with noise
     ../src/sensors/GPSSensor.cpp
     ../src/utils/noise.cpp  # If noise has .cpp; else header-only
+    ../src/estimators/OEKFEstimator.cpp
     # Add more: ../src/Hackflight.cpp if exists
 )
 
